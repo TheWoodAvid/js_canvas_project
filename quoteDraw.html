@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>quoteDraw</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="quoteDraw.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+  <style>
+	  #tile_input {
+		  width:720px;
+		  height:240px
+	  }
+	  #preview {
+		  width:360px;
+		  height:210px;
+		  overflow:hidden
+	  }
+	  #tile_canvas {
+		  transform-origin:0 0;
+		  transform:scale(0.5);
+		  -webkit-transform-origin: 0 0;
+		  -webkit-transform:scale(0.5);
+	  }
+  </style>
+</head>
+
+<body>
+<p>
+<textarea id="tile_input"></textarea><br>
+<button id="write_submit">Submit</button>
+</p>
+<div id="preview"><canvas id="tile_canvas" width=720 height=405></canvas></div>
+</body>
+</html>
