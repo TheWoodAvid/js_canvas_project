@@ -1,0 +1,11 @@
+{
+	"env": {
+		"browser": true,
+		"jquery": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"no-mixed-spaces-and-tabs": 1
+	}
+}

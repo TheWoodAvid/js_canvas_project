@@ -107,7 +107,7 @@ var PPTile = PPTile || {
 		this.specs.bigger.maxLines = 1 + Math.floor( availableHeight / this.specs.bigger.lineHeight );
 		
 		this.specs.smaller.startY = Math.ceil( this.specs.tile.grossTextTop + this.specs.smaller.fontSize * 0.83 );
-		    availableHeight = this.specs.tile.height - this.specs.label.lineHeight - this.specs.tile.margin - this.specs.smaller.startY;
+			availableHeight = this.specs.tile.height - this.specs.label.lineHeight - this.specs.tile.margin - this.specs.smaller.startY;
 		this.specs.smaller.maxLines = 1 + Math.floor( availableHeight / this.specs.smaller.lineHeight );
 		
 		/**
@@ -304,7 +304,7 @@ var PPTile = PPTile || {
 				this.ctx.fillText(
 					lob.lines[ix],
 					this.specs.tile.margin,
-					this.specs.tile.margin + this.specs.label.lineHeight + lob.sizeOb.lineHeight + lob.sizeOb.lineHeight * ix + yCenterOffset ,
+					this.specs.tile.margin + this.specs.label.lineHeight + lob.sizeOb.lineHeight + lob.sizeOb.lineHeight * ix + yCenterOffset
 				);
 			}
 		}

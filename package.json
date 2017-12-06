@@ -1,0 +1,26 @@
+{
+  "name": "quickserver",
+  "version": "1.0.0",
+  "description": "learning quick server setup",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync start --directory --server --files '*.js, *.html, *.css'",
+    "scss": "node-sass-chokidar style.scss -o .",
+    "autoprefixer": "postcss -u autoprefixer -r *.css",
+    "build-css": "npm run scss && npm run autoprefixer",
+    "lint": "eslint *.js",
+    "watch-js": "onchange '*.js' -- npm run lint",
+    "start": "parallelshell 'npm run server' 'npm run watch-js' 'npm run build-css'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "browser-sync": "^2.18.13",
+    "eslint": "^4.12.1",
+    "node-sass-chokidar": "0.0.3",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^4.1.1"
+  }
+}
