@@ -8,9 +8,9 @@
     "scss": "node-sass-chokidar style.scss -o .",
     "autoprefixer": "postcss -u autoprefixer -r *.css",
     "build-css": "npm run scss && npm run autoprefixer",
-    "lint": "eslint *.js",
+    "lint": "eslint *.js; exit 0",
     "watch-js": "onchange '*.js' -- npm run lint",
-    "start": "parallelshell 'npm run server' 'npm run watch-js' 'npm run build-css'"
+    "start": "parallelshell 'npm run watch-js' 'npm run build-css' 'npm run server'"
   },
   "author": "",
   "license": "ISC",
