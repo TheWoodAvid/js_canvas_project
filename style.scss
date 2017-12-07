@@ -1,13 +1,16 @@
 #tile_input {
-	width:720px;
-	height:240px
+	width: 525px;
+	height: 240px;
 }
+
 #preview {
-	width:360px;
-	height:210px;
-	overflow:hidden
+	width: 360px;
+	height: 210px;
+	overflow: hidden;
 }
+
 #tile_canvas {
-	transform-origin:0 0;
-	transform:scale(0.5);
+	transform-origin: 0 0;
+	transform: scale(0.5);
 }
+

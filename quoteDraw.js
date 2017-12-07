@@ -75,7 +75,6 @@ var PPTile = PPTile || {
 	* Later, we'll call it to set all appropriate values and states (see bottom of script)
 	*/
 	init: function() {
-		
 		/**
 		* One popular (and lazy) way to manage the value of 'this' is to set a new variable
 		* like 'self' to the current value of 'this', so that all nested methods below
