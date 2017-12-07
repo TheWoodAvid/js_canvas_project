@@ -258,18 +258,26 @@ var PPTile = PPTile || {
 		// start by stripping off spaces from beginning and end.
 		msg = msg.trim();
 
+		// try our calcLines function with the biggest text specs
 		var lob = this.calcLines( msg, this.specs.biggest );
+		
+		// Did it fit? If not, try again with the next-smaller size
 		if ( !lob.fits ) {
 			lob = this.calcLines( msg, this.specs.bigger );
 		}
+
+		// Did it fit? If not, try again with the next-smaller size
 		if ( !lob.fits ) {
 			lob = this.calcLines( msg, this.specs.smaller );
+			// If it still didn't fit, then we're going to have to cut the extra lines.
 			if ( !lob.fits ) {
 				if ( lob.lines instanceof Array ) {
 					lob.lines = lob.lines.slice( 0, this.specs.smaller.maxLines );
 				}
 			}
 		}
+		
+		// Clear the canvas by drawing the background color over the whole thing.
 		this.ctx.fillStyle=this.specs.tile.fillStyle;
 		this.ctx.fillRect( 0,0, this.specs.tile.width, this.specs.tile.height );
 
