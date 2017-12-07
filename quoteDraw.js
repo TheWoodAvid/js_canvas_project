@@ -164,9 +164,9 @@ var PPTile = PPTile || {
 	* If it turns out the phrase won't fit, complain by setting 'fits' to false.
 	*
 	* I've defined an object called 'output' near the top of my method, so I can easily see
-	* what data gets returned from here. The calculated lines of text go in output.lines,
-	* whether or not they fit goes inside the canvas in output.fits, and output.sizeOb is included
-	* for some reason I forget.
+	* what data gets returned from here. output.lines will contain the calculated lines,
+	* output.fits will contain true/false whether or not they fit inside the canvas, and
+	* output.sizeOb is simply there for later reference.
 	*
 	* Earlier I defined three different text sizes = biggest, bigger and smaller, this method
 	* knows nothing of those, just the one it's been given in sizeOb. Elsewhere we'll 
